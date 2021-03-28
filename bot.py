@@ -41,9 +41,9 @@ def reply(message):
 				chat_group = ""
 				bot.send_message(chat, "You are not the  `Admin`. You have no right to `Send Post`.", parse_mode="Markdown")
 			
-			try:
+			if message.reply_to_message.json.__contains__("reply_markup"):
 				reply_key=message.reply_to_message.json["reply_markup"]
-			except:
+			else:
 				reply_key={}
 			#print(reply_key)
 			reply_key=json.dumps(reply_key)
