@@ -204,7 +204,7 @@ def reply(message):
 			bot.send_message(chat, "Enter the New Password: ", reply_markup=json.dumps(key))
 		elif text=="Songs":
 			text1="Select an  `Album`  from here. Enjoy the  `Music`  🎶🎧🎵🎶."
-			bot.send_message(chat, text1, reply_markup=json.dumps(music.musickey))
+			bot.send_message(chat, text1, reply_markup=json.dumps(music.musickey), parse_mode="Markdown")
 		elif "search" in text.lower():
 			if text.lower().replace('search','').strip()!="":
 				text2="Searching for "+text.lower().replace('search','').strip()+". Please wait..."
