@@ -374,7 +374,7 @@ def test_callback(call):
 # Handles all sent documents and audio files
 @bot.message_handler(content_types=['document', 'audio', 'photo', 'video', 'voice', 'animation', 'sticker'])
 def handle_docs_audio(message):
-	bot.send_message(message.from_user.id, "You have sent  `"+message.content_types+"` .", parse_mode="Markdown")
+	bot.send_message(message.from_user.id, "You have sent  `"+message.content_type.capitalize()+"` .", parse_mode="Markdown")
 
 # Handles all text messages that match the regular expression
 @bot.message_handler(regexp="SOME_REGEXP")
