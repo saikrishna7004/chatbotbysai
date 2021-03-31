@@ -103,6 +103,16 @@ def reply(message):
 			else:
 				reply_doc = message.reply_to_message.json[reply_type]["file_id"]
 				bot.send_message(message.from_user.id, "`"+reply_doc+"`", parse_mode="Markdown")	
+		elif "search" in text.lower():
+			if text.lower().replace('search','').strip()!="":
+				text2="Searching for "+text.lower().replace('search','').strip()+". Please wait..."
+				bot.send_message(chat, text2, reply_markup=keyboard)
+				ans=google_func(text.lower().replace('search','').strip(),5)
+				for x in ans:
+					bot.send_message(chat, x, reply_markup=keyboard)  
+			else:
+				text1="Type what you want to Search. Type 'Search' and add your search keywords to search."
+				bot.send_message(chat, text1, reply_markup=keyboard)
 		elif "website" in text.lower() or "site" in text.lower():
 			cap="Checkout our Website: \nhttps://saikrishna.epizy.com/form.\n\nAny Suggestions are Welcomed. \nSubmit your Suggestions in our Website."
 			web = types.InlineKeyboardMarkup(row_width=3)
@@ -205,16 +215,6 @@ def reply(message):
 		elif text=="Songs":
 			text1="Select an  `Album`  from here. Enjoy the  `Music`  🎶🎧🎵🎶."
 			bot.send_message(chat, text1, reply_markup=json.dumps(music.musickey), parse_mode="Markdown")
-		elif "search" in text.lower():
-			if text.lower().replace('search','').strip()!="":
-				text2="Searching for "+text.lower().replace('search','').strip()+". Please wait..."
-				bot.send_message(chat, text2, reply_markup=keyboard)
-				ans=google_func(text.lower().replace('search','').strip(),5)
-				for x in ans:
-					bot.send_message(chat, x, reply_markup=keyboard)  
-			else:
-				text1="Type what you want to Search. Type 'Search' and add your search keywords to search."
-				bot.send_message(chat, text1, reply_markup=keyboard)
 		elif "m1" in text.lower() or "m2" in text.lower() or "m3" in text.lower() or "m4" in text.lower() or "m5" in text.lower() or "m6" in text.lower() or "m7" in text.lower() or "m8" in text.lower() or "m9" in text.lower() or "m10" in text.lower() or "m11" in text.lower() or "m12" in text.lower() or "m13" in text.lower() or "m14" in text.lower() or "m15" in text.lower():
 			moviesend(chat, text)
 		elif "movie" in text.lower():
@@ -503,7 +503,7 @@ def power(x,y):
 def google_func(q, n):
 	l=[]
 	for i in search(query=q,tld='co.in',num=10,stop=n,pause=1):
-		l.append(i.replace("_", r"\_"))
+		l.append(i)
 	return l
 
 def keyfunc(message):
