@@ -2,3 +2,4 @@ google==3.0.0
 pyTelegramBotAPI==3.7.6
 requests==2.25.1
 flask
+pyaudio
