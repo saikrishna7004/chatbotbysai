@@ -382,7 +382,6 @@ def inline_test(query):
 	print(first_name)
 	print("query:", ques)
 	ques=ques.lower()
-	import utils
 	if movie.names.__contains__(ques):
 		results = []
 		mnq = movie.names[ques]
