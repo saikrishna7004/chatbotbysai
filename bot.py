@@ -389,6 +389,8 @@ def inline_test(query):
 			if mnq[x]!="0":
 				results.append(types.InlineQueryResultCachedDocument(x, mnq[x], mnq[5], "\nSize: " + movie.msize(x)))		
 		bot.answer_inline_query(iqi, results)
+	elif ques=="":
+		bot.answer_inline_query(iqi, results=[], switch_pm_text="Type something..😁", switch_pm_parameter="start")
 	else:
 		bot.answer_inline_query(iqi, results=[], switch_pm_text="No results found😞", switch_pm_parameter="start")
 
