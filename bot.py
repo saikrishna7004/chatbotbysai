@@ -53,7 +53,7 @@ def reply(message):
 			elif reply_type=="photo":
 				reply_doc = message.reply_to_message.json["photo"][0]["file_id"]
 			else:
-				reply_doc = message.reply_to_message.json["video"]["file_id"]
+				reply_doc = message.reply_to_message.json[reply_type]["file_id"]
 				
 			if reply_type=="text":
 				#print(message.reply_to_message.reply_markup.keyboard)
