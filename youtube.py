@@ -5,14 +5,14 @@ def you(link):
 	stream = yt.streams.filter(res="144p", mime_type="video/mp4")[0]
 	print(stream)
 	try:
-		fil=open("temp.mp4","rb")
+		fil=open("youtube/temp.mp4","rb")
 		temptext=fil.read()
 		if temptext=="":
 			filed="temp"
 		else:
 			filed="temp1"
 	except:
-		open("temp.mp4","wb").close()
+		open("youtube/temp.mp4","wb").close()
 		filed="temp"
 	
 	print(stream.download("youtube",filed))
