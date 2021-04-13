@@ -2,7 +2,7 @@ import pytube
 def you(link):
 	yt = pytube.YouTube(link)
 	print(yt)
-	stream = yt.streams.filter(res="144p", mime_type="video/mp4")[0]
+	stream = yt.streams.filter(progressive=True, res="360p")[0]
 	print(stream)
 	try:
 		fil=open("youtube/temp.mp4","rb")
@@ -18,4 +18,4 @@ def you(link):
 	print(stream.download("youtube",filed))
 	return filed
 if __name__=="__main__":
-	you("https://youtu.be/oK_rLUl2_8w")
+	you("https://youtu.be/h9Am4CYaLng")
