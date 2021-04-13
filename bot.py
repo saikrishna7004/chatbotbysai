@@ -714,7 +714,7 @@ def power(x,y):
 def google_func(q, n):
 	l=[]
 	for i in search(query=q,tld='co.in',num=10,stop=n,pause=1):
-		l.append(i.replace("_", r"\_"))
+		l.append(i)
 	return l
 
 def sort(ques):
