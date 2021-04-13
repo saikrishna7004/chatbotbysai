@@ -247,7 +247,7 @@ def reply(message):
 			except:
 				text1="I'm unable to answer the Question. Please verify the question and try again."
 		bot.send_message(chat, text1, reply_markup=keyboard)
-	elif "https://youtu" in text.lower() or "http://youtube.com" in text.lower():
+	elif "https://youtu" in text.lower() or "http://youtube.com" in text.lower() or "http://www.youtube.com" in text.lower():
 		import youtube
 		yn=bot.send_message(chat, "Trying to download...")
 		title = youtube.you(text)
