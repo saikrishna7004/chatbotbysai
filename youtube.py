@@ -2,7 +2,7 @@ import pytube
 def you(link):
 	yt = pytube.YouTube(link)
 	print(yt)
-	stream = yt.streams[5]
+	stream = yt.streams.filter(res="144p", mime_type="video/mp4")[0]
 	print(stream)
 	print(stream.download("youtube"))
 	return yt.title
