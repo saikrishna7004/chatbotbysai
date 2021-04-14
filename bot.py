@@ -61,6 +61,8 @@ def reply(message):
 			reply_cap = message.reply_to_message.json["caption"]
 		except:
 			reply_cap = ""
+		
+		reply_cap = "*"+reply_cap+"*"
 				
 		if reply_type=="text":
 			#print(message.reply_to_message.reply_markup.keyboard)
@@ -69,26 +71,26 @@ def reply(message):
 		elif reply_type=="photo":
 			print(message.reply_to_message.json)
 			print(reply_doc)
-			bot.send_photo(chat_group, reply_doc, caption=reply_cap, reply_markup=reply_key)
+			bot.send_photo(chat_group, reply_doc, caption=reply_cap, reply_markup=reply_key, parse_mode="Markdown")
 			bot.send_message(chat, "`Post Sent`", parse_mode="Markdown", reply_markup=keyboard)
 		elif reply_type=="video":
 			print(reply_doc)
-			bot.send_video(chat_group, reply_doc, caption=reply_cap, reply_markup=reply_key)
+			bot.send_video(chat_group, reply_doc, caption=reply_cap, reply_markup=reply_key, parse_mode="Markdown")
 			bot.send_message(chat, "`Post Sent`", parse_mode="Markdown", reply_markup=keyboard)
 		elif reply_type=="document":
 			reply_doc = message.reply_to_message.json["document"]["file_id"]
 			print(reply_doc)
-			bot.send_document(chat_group, reply_doc, caption=reply_cap, reply_markup=reply_key)
+			bot.send_document(chat_group, reply_doc, caption=reply_cap, reply_markup=reply_key, parse_mode="Markdown")
 			bot.send_message(chat, "`Post Sent`", parse_mode="Markdown", reply_markup=keyboard)
 		elif reply_type=="voice":
 			reply_doc = message.reply_to_message.json["voice"]["file_id"]
 			print(reply_doc)
-			bot.send_voice(chat_group, reply_doc, caption=reply_cap, reply_markup=reply_key)
+			bot.send_voice(chat_group, reply_doc, caption=reply_cap, reply_markup=reply_key, parse_mode="Markdown")
 			bot.send_message(chat, "`Post Sent`", parse_mode="Markdown", reply_markup=keyboard)
 		elif reply_type=="audio":
 			reply_doc = message.reply_to_message.json["audio"]["file_id"]
 			print(reply_doc)
-			bot.send_audio(chat_group, reply_doc, caption=reply_cap, reply_markup=reply_key)
+			bot.send_audio(chat_group, reply_doc, caption=reply_cap, reply_markup=reply_key, parse_mode="Markdown")
 			bot.send_message(chat, "`Post Sent`", parse_mode="Markdown", reply_markup=keyboard)
 		else:
 			bot.send_message(chat, "There is  `No Post`  to send.\n\nTo  `Send Post` , Click on  `Send Post to Subscribers`  for more details.", parse_mode="Markdown", reply_markup=keyboard)
@@ -252,7 +254,7 @@ def reply(message):
 		yn=bot.send_message(chat, "Trying to download...")
 		title = youtube.you(text)
 		bot.edit_message_text("Download successful. Trying to upload...", chat, yn.id)
-		bot.send_video(chat, open("youtube/"+title+".mp4", "rb"))
+		bot.send_document(chat, open("youtube/"+title+".mp4", "rb"))
 		open("youtube/"+title+".mp4", "wb").close()
 		bot.edit_message_text("Here is your video.", chat, yn.id)
 	elif "thank" in text.lower():
