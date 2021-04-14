@@ -34,7 +34,7 @@ def reply(message):
 	elif text=="Send Post":
 		reply_type=filetype(message)
 		if str(chat)=="903774501":
-			chat_group = "-1001387572466"
+			chat_group = "-1001185534031"
 			bot.send_message(chat, "Trying to `Send Post`...", parse_mode="Markdown", reply_markup=keyboard)
 		elif str(chat)=="1467813172":
 			chat_group = "-1001162021879"
