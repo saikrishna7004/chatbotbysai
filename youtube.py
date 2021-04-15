@@ -1,21 +1,29 @@
 import pytube
+
 def you(link):
 	yt = pytube.YouTube(link)
 	print(yt)
-	stream = yt.streams.filter(progressive=True, res="360p")[0]
+	print(yt.title)
+	stream = yt.streams.filter(abr="50kbps", type="audio")[0]
+	stream1=yt.streams.filter(res="144p")[0]
 	print(stream)
-	try:
-		fil=open("youtube/temp.mp4","rb")
-		temptext=fil.read()
-		if temptext=="":
-			filed="temp"
-		else:
-			filed="temp1"
-	except:
-		open("youtube/temp.mp4","wb").close()
-		filed="temp"
-	
-	print(stream.download("youtube",filed))
-	return filed
+	print(stream1)
+	print(stream.download("youtube","temp"))
+	print(stream.download("youtube","temp1"))
+	combine_audio('./youtube/temp.webm', './youtube/temp1.mp4', './youtube/temp2.mp4')
+	return "temp2"
+
+def combine_audio(inpaud, inpvid, outp):
+    
+    import ffmpeg
+
+	input_video = ffmpeg.input(inpvid)
+
+	input_audio = ffmpeg.input(inpaud)
+
+	ffmpeg.concat(input_video, input_audio, v=1, a=1).output(outp).run()
+
 if __name__=="__main__":
-	you("https://youtu.be/h9Am4CYaLng")
+	
+	you("https://youtu.be/KS6XeRkN_us")
+	

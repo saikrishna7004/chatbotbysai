@@ -467,6 +467,50 @@ def file_len(fname):
             pass
     return i + 1
 
+import youtube_dl
+#Intitialize YouTube downloader
+ydl = youtube_dl.YoutubeDL({'outtmpl': '%(id)s%(ext)s'})
+
+# works when /ytdl <link> is given
+@bot.message_handler(commands=['ytdl'])
+def down(msg):
+	args = msg.text.split()[1]
+	try:
+		with ydl:
+			result = ydl.extract_info(
+				args,
+				download=False  # We just want to extract the info
+			)
+
+		if 'entries' in result:
+			# Can be a playlist or a list of videos
+			video = result['entries'][0]
+		else:
+			# Just a video
+			video = result
+		
+		ytkey = {
+					"inline_keyboard": [
+							
+						]
+					}
+		
+		for i in video['formats']:
+			link = '<a href=\"' + i['url'] + '\">' + 'link' + '</a>'
+			print(link)
+			if i.get('format_note'):
+				#ytkey["inline_keyboard"].append([{"text": "Quality - " + i["format_note"], "url": i["url"]}],)
+				bot.reply_to(msg, 'Quality - ' + i['format_note'] + ' : ' + link, parse_mode='HTML')
+			else:
+				bot.reply_to(msg, 'Quality - Unknown : ' + link, parse_mode='HTML')
+				#ytkey["inline_keyboard"].append([{"text": "Quality - Unknown", "url": i["url"]}],)
+				bot.reply_to(msg, link, parse_mode='HTML', disable_notification=True)
+		#bot.send_message(msg.chat.id, "Here are your results.", reply_markup=json.dumps(ytkey))
+	
+	except Exception as e:
+		print(e)
+		bot.reply_to(msg, 'This can\'t be downloaded by me')
+
 # Handles all text messages that contains the commands '/start' or '/help'.
 @bot.message_handler(commands=['start'])
 def handle_start(message):
