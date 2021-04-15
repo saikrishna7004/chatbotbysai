@@ -13,9 +13,16 @@ def you(link):
 	combine_audio('./youtube/temp.webm', './youtube/temp1.mp4', './youtube/temp2.mp4')
 	return "temp2"
 
-def combine_audio(inpaud, inpvid, outp):
+def combine_audio(audname, vidname, outname, fps=25):
+    import moviepy.editor as mpe
+    my_clip = mpe.VideoFileClip(vidname)
+    audio_background = mpe.AudioFileClip(audname)
+    final_clip = my_clip.set_audio(audio_background)
+    final_clip.write_videofile(outname,fps=fps)
+
+#def combine_audio(inpaud, inpvid, outp):
 	
-	import ffmpeg
+	#import ffmpeg
 
 	#input_video = ffmpeg.input(inpvid)
 
@@ -23,8 +30,8 @@ def combine_audio(inpaud, inpvid, outp):
 
 	#ffmpeg.concat(input_video, input_audio, v=1, a=1).output(outp).run()
 	
-	cmd = 'ffmpeg -y -i '+inpaud+'  -r 30 -i '+inpvid+'  -filter:a aresample=async=1 -c:a flac -c:v copy '+outp
-	subprocess.call(cmd, shell=True)
+	#cmd = 'ffmpeg -y -i '+inpaud+'  -r 30 -i '+inpvid+'  -filter:a aresample=async=1 -c:a flac -c:v copy '+outp
+	#subprocess.call(cmd, shell=True)
 
 if __name__=="__main__":
 	
