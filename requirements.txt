@@ -4,3 +4,4 @@ requests==2.25.1
 pytube
 ffmpeg
 youtube_dl
+ffmpeg-python
