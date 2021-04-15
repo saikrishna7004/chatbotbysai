@@ -15,15 +15,18 @@ def you(link):
 
 def combine_audio(inpaud, inpvid, outp):
 	
-	import ffmpeg
+	#import ffmpeg
 
-	input_video = ffmpeg.input(inpvid)
+	#input_video = ffmpeg.input(inpvid)
 
-	input_audio = ffmpeg.input(inpaud)
+	#input_audio = ffmpeg.input(inpaud)
 
-	ffmpeg.concat(input_video, input_audio, v=1, a=1).output(outp).run()
+	#ffmpeg.concat(input_video, input_audio, v=1, a=1).output(outp).run()
+	
+	cmd = 'ffmpeg -y -i '+inpaud+'  -r 30 -i '+inpvid+'  -filter:a aresample=async=1 -c:a flac -c:v copy '+outp
+	subprocess.call(cmd, shell=True)
 
 if __name__=="__main__":
 	
 	you("https://youtu.be/KS6XeRkN_us")
-	__main__
+	
