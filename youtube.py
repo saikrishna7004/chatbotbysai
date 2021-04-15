@@ -15,7 +15,7 @@ def you(link):
 
 def combine_audio(inpaud, inpvid, outp):
 	
-	#import ffmpeg
+	import ffmpeg
 
 	#input_video = ffmpeg.input(inpvid)
 
