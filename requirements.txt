@@ -5,3 +5,4 @@ pytube
 ffmpeg
 youtube_dl
 ffmpeg-python
+moviepy
