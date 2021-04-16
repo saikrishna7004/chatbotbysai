@@ -1,7 +1,8 @@
 import telebot, random, movie, news, datetime, calendar, json, replykey, pickle, music, time
 from googlesearch import search
 from telebot import types
-bot = telebot.TeleBot("1532672197:AAGBrhsDRQl5LLOch3bzqwka9AxKbIkrYDk")
+TOKEN=os.getenv('TOKEN')
+bot = telebot.TeleBot(TOKEN)
 pw=[]
 pwr=[]
 
