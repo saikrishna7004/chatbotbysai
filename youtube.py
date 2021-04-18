@@ -4,14 +4,14 @@ def you(link):
 	yt = pytube.YouTube(link)
 	print(yt)
 	print(yt.title)
-	#stream = yt.streams.filter(abr="50kbps", type="audio")[0]
+	stream = yt.streams.filter(abr="50kbps", type="audio")[0]
 	stream1=yt.streams.filter(res="144p")[0]
-	#print(stream)
+	print(stream)
 	print(stream1)
-	#print(stream.download("youtube","temp"))
+	print(stream.download("youtube","temp"))
 	print(stream1.download("youtube","temp1"))
 	#combine_audio('./youtube/temp.webm', './youtube/temp1.mp4', './youtube/temp2.mp4')
-	return "temp1"
+	return "temp1","temp"
 
 def combine_audio(inpaud, inpvid, outp):
 	
