@@ -12,7 +12,7 @@ def you(link):
 	print(stream.download("youtube","temp1"))
 	shutil.copy('youtube/temp.webm', 'youtube/audio.mp3')
 	try:
-		shutil.copy('youtube/temp.webm', 'youtube/audio.mp3')
+		shutil.copy('youtube/temp.webm', 'youtube/video.mp4')
 	except:
 		shutil.copy('youtube/temp.mp4', 'youtube/video.mp4')
 	#combine_audio('./youtube/temp.webm', './youtube/temp1.mp4', './youtube/temp2.mp4')
