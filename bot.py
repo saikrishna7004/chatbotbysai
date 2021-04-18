@@ -253,8 +253,6 @@ def reply(message):
 	elif "https://youtu" in text.lower() or "http://youtube.com" in text.lower() or "http://www.youtube.com" in text.lower():
 		import youtube
 		yn=bot.send_message(chat, "Trying to download...")
-		title = youtube.you(text)[0]
-		title1 = youtube.you(text)[1]
 		bot.edit_message_text("Download successful. Trying to upload...", chat, yn.id)
 		bot.send_document(chat, open("youtube/video.mp4", "rb"))
 		bot.send_document(chat, open("youtube/audio.mp3", "rb"))
