@@ -8,13 +8,10 @@ def you(link):
 	stream1=yt.streams.filter(res="144p")[0]
 	print(stream)
 	print(stream1)
-	print(stream.download("youtube","temp"))
-	print(stream1.download("youtube","temp1"))
+	f0=stream.download("youtube","temp")
+	f1=stream1.download("youtube","temp1")
 	shutil.copy('youtube/temp.webm', 'youtube/audio.mp3')
-	try:
-		shutil.copy('youtube/temp1.webm', 'youtube/video.mp4')
-	except:
-		shutil.copy('youtube/temp1.mp4', 'youtube/video.mp4')
+	shutil.copy(f1, 'youtube/video.mp4')
 	combine_audio('./youtube/audio.mp3', './youtube/video.mp4', './youtube/temp2.mp4')
 	return "temp2.mp4"
 
