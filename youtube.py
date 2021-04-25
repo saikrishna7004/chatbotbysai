@@ -23,7 +23,7 @@ def combine_audio(inpaud, inpvid, outp):
 	import os
 	#ffmpeg -i video.mp4 -i audio.wav -c:v copy -c:a aac output.mp4
 
-	cmd = "ffmpeg -i "+inpvid+" -i "+inpaud+" -c:v copy -c:a aac"+outp
+	cmd = "ffmpeg -i "+inpvid+" -i "+inpaud+" -c:v copy -c:a aac "+outp
 	os.system(cmd)
 
 if __name__=="__main__":
