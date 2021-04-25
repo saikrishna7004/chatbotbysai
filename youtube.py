@@ -21,7 +21,9 @@ def combine_audio(inpaud, inpvid, outp):
 	#input_audio = ffmpeg.input(inpaud)
 	#ffmpeg.concat(input_video, input_audio, v=1, a=1).output(outp).run()
 	import os
-	cmd = "ffmpeg -i "+inpvid+" -i "+inpaud+"^ -c copy "+outp
+	ffmpeg -i video.mp4 -i audio.wav -c:v copy -c:a aac output.mp4
+
+	cmd = "ffmpeg -i "+inpvid+" -i "+inpaud+" -c:v copy -c:a aac"+outp
 	os.system(cmd)
 
 if __name__=="__main__":
