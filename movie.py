@@ -43,13 +43,13 @@ names = {
 			   'Red 2021 Telugu HDRip'
 	],
 	
-	'bangarubullodu':
-			 ['BQACAgQAAxkBAAITomAXpLowzAFlJ4YvacQQT7-MbZ6pAAI7CQAC__loUBqj-KL-I606HgQ',
-			  'BQACAgQAAxkBAAITo2AXpLrWago_dZsCy_s_ZaW040UYAAI9CQAC__loUKzSx9YbYatgHgQ',
-			  'BQACAgQAAxkBAAITpGAXpLorHQQDaqR_MxCJyMbnYUW2AAJOCQAC__loUFV0v_cOj9fFHgQ',
-			  'BQACAgQAAxkBAAITpWAXpLrNzYe0pl7fxtkYmS9j17-iAAJJCQAC__loULVGiz0EQMrzHgQ',
-			  'BQACAgQAAxkBAAITpmAXpLpHs3UAAboywqdV5SGYNb9KpAACSwkAAv_5aFDNRkQvAdSxbx4E',
-			  'Bangaru Bullodu 2021 Telugu DVDRip'		  
+	'vakeelsaab':
+			 ['BQACAgQAAxkBAAI_EmCL90he2Xca0mUNfFI1FmXq4br2AAKlCQACmzxZUKZDUd_T8JxNHwQ',
+			  'BQACAgQAAxkBAAI_EWCL90g4Av8Vg1V4zTW_fKMWSON9AAKmCQACmzxZUKvrj7qyqwNMHwQ',
+			  'BQACAgQAAxkBAAI_EGCL90jcYYCyga14ptKk1cReIiHLAAKpCQACmzxZUKsPbFX77xD6HwQ',
+		 	 'BQACAgQAAxkBAAI_D2CL90j_IfDTsQ5fjne-jpttKFmeAAKoCQACmzxZUPQ1n2NluzpEHwQ',
+			  'BQACAgQAAxkBAAI_DmCL90gqnP617vXqKLxEa-Hblb7oAAKnCQACmzxZUGzEYMPdcFIfHwQ',
+		 	 'Vakeel Saab 2021 Telugu HDRip'		  
 	],
 	
 	'alluduadhurs'  :
@@ -69,12 +69,12 @@ names = {
 			   'Aranya 2021 Telugu DVDRip'
 	],
 	
-	'30rpe': ['BQACAgQAAxkBAAIVD2AX7FRuA_B46rmyWkWw_wJxhn5gAAJhCAACZvywUKm6huERWtjkHgQ',
-			  'BQACAgQAAxkBAAIVEGAX7FSVyBx5moNkF_W08EFXgl0-AAJcCAACZvywUESZKaDDz8uqHgQ',
-			  'BQACAgQAAxkBAAIVEWAX7FTMlaWdlXGXKmkH-D1RhdxpAAJzCAACZvywUMro9YkFRAXdHgQ',
-			  'BQACAgQAAxkBAAIVEmAX7FQhSee1Qr48_Tpal3NhI1iIAAJvCAACZvywUPP5pSo2rJ_hHgQ',
-			  'BQACAgQAAxkBAAIVE2AX7FSNQdeFX6iKh-W6usazQTnvAAJiCAACZvywUDrRXWenZJrKHgQ',
-			  '30 Rojullo Preminchadam Ela 2021 Telugu DVDRip'
+	'shashi': ['BQACAgQAAxkBAAI_bWCL-6CyMFuqTVggfq9DHHDZ7oQgAAJZCQACnoLBU3R7VfbGQAABqR8E',
+			   'BQACAgEAAxkBAAI_bmCL-6BUZziTvkJBo8PAua25GZlZAALOAQACKsHAR6IR1OwzqDXlHwQ',
+			   'BQACAgQAAxkBAAI_b2CL-6BnQY9v0VqHeFSS2la421CKAAIVDQAC2gu4U1ApJeKk0j-QHwQ',
+			   '0',
+			   'BQACAgQAAxkBAAI_cGCL-6D3i-KhFqfrw9iHk6e-4K_sAAJgCwACHgABuFPCtasSM7LE-B8E',
+			   'Shashi 2021 Telugu HDRip'
 	],
 	
 	'check': ['BAACAgQAAxkBAAIpU2A9AboouCMnJkbsyHNubQYrp75MAAIiEgACOwrJUfKYz0SsIEnSHgQ',
@@ -86,30 +86,31 @@ names = {
 			  'video'
 	],
 	
-	'jr'	 :['BQACAgQAAxkBAAIqEmBPGxr5YQ8q5pfq_w2YnWf1lZfuAAImCgACsddRUlfywgnbVqPwHgQ',
-			   'BQACAgQAAxkBAAIqE2BPGxqf6p8hwAQXtfr1UrT3epJFAAKADAAC_8dRUvZf4bQ7u0kxHgQ',
-			   'BQACAgQAAxkBAAIqFGBPGxq9Q99uoAMOT8hzPirNWuiPAAIoCgACsddRUh6ecEfBd5dOHgQ',
-			   '0',
-			   'BQACAgQAAxkBAAIqFWBPGxpO9Zkh5pTDaLzcYv9M4h7eAAJyBgAC6Z9QUu2fGyyKxoY7HgQ',
-			   'Jaathiratnalu 2021 Telugu PreDVD'
+	'jathiratnalu':	 
+			  ['BQACAgQAAxkBAAI_WWCL-ngKxcCQL6iWstS3uv8-mOidAAIrCwACSRaxUyB0-zCoXRlvHwQ',
+			   'BQACAgQAAxkBAAI_WmCL-nhDHy6URWwMUKX5hfjVkIUrAAI2CwACSRaxU23FOt9v91yoHwQ',
+			   'BQACAgQAAxkBAAI_W2CL-ng7XpNtAAFTenyyoHndEI5yxgACNwsAAkkWsVOH63MmnKxSXh8E',
+			   'BQACAgQAAxkBAAI_XGCL-ngZhEzxOl-e37qxoTf6tWn_AAJDCwACSRaxU4nObyB-tbuqHwQ',
+			   'BQACAgQAAxkBAAI_XWCL-nhJiDi9doTZ7pjBp3j1_yiDAAJFCwACSRaxUyuAYekX3I7jHwQ',
+			   'Jaathiratnalu 2021 Telugu HDRip'
 	],
 	
 	'sreekaram':
-			  ['BQACAgEAAxkBAAIqOmBPHuZRkRLKnn6cYYQh40M-xMn8AAK_AQAC6ZJYRqJDbjwYvGaXHgQ',
-			   'BQACAgQAAxkBAAIqO2BPHuZ_FLNZJNMFi0ZlZ5rt9Zj9AALKCgACiBZZUgPgUbzSFniaHgQ',
-			   'BQACAgQAAxkBAAIqPGBPHuaTcQZjF9Fao0_x43EQy_-DAALXDAACxxtZUnd-lhM_z5JaHgQ',
-			   '0',
-			   'BQACAgQAAxkBAAIqPWBPHuY_8nkO4V_CCe0kPww2KKAvAALWDAACxxtZUiyQJlzDCpMmHgQ',
-			   'Sreekaram 2021 Telugu PreDVD'
+			  ['BQACAgQAAxkBAAI_RWCL-bKguYAKAtlkbSBX84j_krU3AAJGCAACLvHIU2kcR21QlFAOHwQ',
+			   'BQACAgQAAxkBAAI_RmCL-bJllPxz6jvz_UkPA3uh4EaKAALXBgACnZ7JU6d0WfhI2CqVHwQ',
+			   'BQACAgQAAxkBAAI_R2CL-bIFKIcO_7R2t9ADKXeM4oU0AAIeBwACThDIU5trJUApAzriHwQ',
+			   'BQACAgQAAxkBAAI_SGCL-bKO6szYqkp4eNxAGS_yvjfgAAJHCAACLvHIUwyYstB4iVgvHwQ',
+			   'BQACAgQAAxkBAAI_SWCL-bL5RmVkMPme5Krm08Crk2nnAAJLCAACLvHIU20OIs2oTzr9HwQ',
+			   'Sreekaram 2021 Telugu HDRip'
 	
 	],
 	
-	'uppena' :['BQACAgEAAxkBAAIj52AnfMgq1jaPq5SRqfHKlCI4cpFOAAKqAQACIcc4RQ7X4MqBd53SHgQ',
-			   'BQACAgQAAxkBAAIj6GAnfMi0-itBPItHAAHCZchzo-W9YwADCwACUI85USUeb68UQoDmHgQ',
-			   'BQACAgQAAxkBAAIj6WAnfMjcYYnXBah9eBR2IlHPHiYlAAJSDQACNOg5UcpfJsS6VYURHgQ',
-			   '0',
-			   'BQACAgQAAxkBAAIj6mAnfMgkQ-_qmq22u7pANqUdmBoPAAJTDQACNOg5UTrjRIlwNMjyHgQ',
-			   'Uppena 2021 Telugu PreDVD'
+	'uppena' :['BQACAgQAAxkBAAI_MWCL-T6NGocjwYbZbHMePbe8EJc2AAK1CgACXnCxU4BE1A_9r_FjHwQ',
+			   'BQACAgQAAxkBAAI_MmCL-T574vhs9kyHA1_U4byGC0KoAAJICAACCIS4U55FVYmpo1q0HwQ',
+			   'BQACAgQAAxkBAAI_M2CL-T5jAZt_oX1xb9arSYzpdcAWAAIbCQAC2SqwU_qPTBuZrTOyHwQ',
+			   'BQACAgQAAxkBAAI_NGCL-T7uiUD8gkYEk--JnPUFuByBAAK2CgACXnCxUxAPlmxoFaprHwQ',
+			   'BQACAgQAAxkBAAI_NWCL-T5HkUkMklv37k-UEvGOR7KBAAL7CAACqSWxU6kd9q-Ic2nNHwQ',
+			   'Uppena 2021 Telugu HDRip'
 	],
 	
 	'pogaru' :['BQACAgQAAxkBAAInvGA3CAN7Fh8Y7FX109GDNbiFF6YlAALiCAAC6HeIURbnC6otHIoGHgQ',
@@ -120,12 +121,12 @@ names = {
 			   'Pogaru 2021 Telugu PreDVD'
 	],
 	
-	'naandhi':['BQACAgQAAxkBAAInzmA3CasmbnOWbW_lyc5tT1ocezphAALRCgACqR6QUYIQvejJmtMLHgQ',
-			   'BQACAgQAAxkBAAInz2A3CauZoH8I6TDMTYizB97yDkPsAALSCgACqR6QUWdjbk_oJhTzHgQ',
-			   'BQACAgQAAxkBAAIn0GA3Cavo-ixBrYtVip5GuvRuXHSVAALTCgACqR6QUR1KCUBdQAABth4E',
-			   'BQACAgQAAxkBAAIn0WA3CauAQTQSktU38XRHdWwNTS77AALICAACsjCQUbWBy5U7BfyDHgQ',
-			   'BQACAgQAAxkBAAIn0mA3CauLTvYAAacwh3750K4YixmaIgAC1AoAAqkekFErT5ttj2wkxB4E',
-			   'Naandhi 2021 Telugu PreDVD'
+	'sulthan':['BQACAgQAAxkBAAI_fmCL_PH-y8B9XiLtia8Qt5jiUsNzAAKfCQACmzxZUKb9Ron-85aiHwQ',
+			   'BQACAgQAAxkBAAI_f2CL_PFS-L-Tnw1whlia8gxHfMC1AAKeCQACmzxZUIPVLeYnjsMfHwQ',
+			   'BQACAgQAAxkBAAI_gGCL_PFcD5H8Yjl5GWbbdhJaKmGPAAKgCQACmzxZUAi9xlgY72BcHwQ',
+			   'BQACAgQAAxkBAAI_gWCL_PHaM-Yfx64pZU58k6dyBMp9AAKhCQACmzxZUKdVmZpY5EcbHwQ',
+			   'BQACAgQAAxkBAAI_gmCL_PEx6RNz3DaUy3tSIkqemCJQAAKiCQACmzxZUGoKvM3xAwkGHwQ',
+			   'Sulthan 2021 Telugu HDRip'
 	],
 
 }
@@ -142,17 +143,17 @@ def moviecheck(a):
 	elif a=="m5":
 		b="red"
 	elif a=="m6":
-		b="bangarubullodu"
+		b="vakeelsaab"
 	elif a=="m7":
 		b="alluduadhurs"
 	elif a=="m8":
 		b="aranya"
 	elif a=="m9":
-		b="30rpe"
+		b="shashi"
 	elif a=="m10":
 		b="check"
 	elif a=="m11":
-		b="jr"
+		b="jathiratnalu"
 	elif a=="m12":
 		b="sreekaram"
 	elif a=="m13":
@@ -160,7 +161,7 @@ def moviecheck(a):
 	elif a=="m14":
 		b="pogaru"
 	elif a=="m15":
-		b="naandhi"
+		b="sulthan"
 	else:
 		b=""
 	return b
@@ -215,7 +216,7 @@ key = {
 							{"text": "Red", "callback_data": "m5"},
 						],
 						[
-							{"text": "Bangaru Bullodu", "callback_data": "m6"},
+							{"text": "Vakeel Saab", "callback_data": "m6"},
 						],
 						[
 							{"text": "Alludu Adhurs", "callback_data": "m7"},
@@ -224,7 +225,7 @@ key = {
 							{"text": "Aranya", "callback_data": "m8"},
 						],
 						[
-							{"text": "30 Rojullo Preminchadam Ela", "callback_data": "m9"},
+							{"text": "Shashi", "callback_data": "m9"},
 						],
 						[
 							{"text": "Check", "callback_data": "m10"}
@@ -242,7 +243,7 @@ key = {
 							{"text": "Pogaru", "callback_data": "m14"},
 						],
 						[
-							{"text": "Naandhi", "callback_data": "m15"},
+							{"text": "Sulthan", "callback_data": "m15"},
 						],
 						[
 							{"text": "❌ Cancel ❌", "callback_data": "clear"},
@@ -256,16 +257,16 @@ b = types.InlineKeyboardButton(text="Krack", callback_data="m2")
 c = types.InlineKeyboardButton(text="Rang De!", callback_data="m3")
 d = types.InlineKeyboardButton(text="Solo Brathuke So Better", callback_data="m4")
 e = types.InlineKeyboardButton(text="Red", callback_data="m5")
-f = types.InlineKeyboardButton(text="Bangaru Bullodu", callback_data="m6")
+f = types.InlineKeyboardButton(text="Vakeel Saab", callback_data="m6")
 g = types.InlineKeyboardButton(text="Alludu Adhurs", callback_data="m7")
 h = types.InlineKeyboardButton(text="Aranya", callback_data="m8")
-i = types.InlineKeyboardButton(text="30 Rojullo Preminchadam Ela", callback_data="m9")
+i = types.InlineKeyboardButton(text="Shashi", callback_data="m9")
 j = types.InlineKeyboardButton(text="Check", callback_data="m10")
 k = types.InlineKeyboardButton(text="Jathiratnalu", callback_data="m11")
 l = types.InlineKeyboardButton(text="Sreekaram", callback_data="m12")
 m = types.InlineKeyboardButton(text="Uppena", callback_data="m13")
 n = types.InlineKeyboardButton(text="Pogaru", callback_data="m14")
-o = types.InlineKeyboardButton(text="Naandhi", callback_data="m15")
+o = types.InlineKeyboardButton(text="Sulthan", callback_data="m15")
 p = types.InlineKeyboardButton(text="❌ Cancel ❌", callback_data="clear")
 
 key1.add(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p)
