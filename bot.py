@@ -255,11 +255,11 @@ def reply(message):
 		ret=youtube.you(text)
 		yn=bot.send_message(chat, "Trying to download...")
 		bot.edit_message_text("Download successful. Trying to upload...", chat, yn.id)
-		bot.send_document(chat, open("youtube/video.mp4", "rb"))
-		bot.send_document(chat, open("youtube/audio.mp3", "rb"))
+		bot.send_video(chat, open("youtube/video.mp4", "rb"))
+		bot.send_audio(chat, open("youtube/audio.mp3", "rb"))
 		open("youtube/video.mp4", "wb").close()
 		open("youtube/audio.mp3", "wb").close()
-		bot.send_document(chat, open("youtube/"+ret,"rb"))
+		bot.send_video(chat, open("youtube/"+ret,"rb"))
 		bot.edit_message_text("Here is your video.", chat, yn.id)
 	elif "thank" in text.lower():
 		text1="It's my Pleasure 😃."
