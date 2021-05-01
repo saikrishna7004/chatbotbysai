@@ -262,8 +262,9 @@ def reply(message):
 			open("youtube/audio.mp3", "wb").close()
 			bot.send_video(chat, open("youtube/"+ret,"rb"))
 			bot.edit_message_text("Here is your video.", chat, yn.id)
-		except:
+		except Exception as e:
 			bot.send_message(chat, "An error occurred, try again later.")
+			bot.send_message(chat, e)
 	elif "thank" in text.lower():
 		text1="It's my Pleasure 😃."
 		bot.send_message(chat, text1, reply_markup=keyboard)
