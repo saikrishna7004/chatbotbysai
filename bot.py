@@ -251,16 +251,19 @@ def reply(message):
 				text1="I'm unable to answer the Question. Please verify the question and try again."
 		bot.send_message(chat, text1, reply_markup=keyboard)
 	elif "https://youtu" in text.lower() or "http://youtube.com" in text.lower() or "http://www.youtube.com" in text.lower():
-		import youtube
-		yn=bot.send_message(chat, "Trying to download...")
-		ret=youtube.you(text)
-		bot.edit_message_text("Download successful. Trying to upload...", chat, yn.id)
-		bot.send_video(chat, open("youtube/video.mp4", "rb"))
-		bot.send_audio(chat, open("youtube/audio.mp3", "rb"))
-		open("youtube/video.mp4", "wb").close()
-		open("youtube/audio.mp3", "wb").close()
-		bot.send_video(chat, open("youtube/"+ret,"rb"))
-		bot.edit_message_text("Here is your video.", chat, yn.id)
+		try:	
+			import youtube
+			yn=bot.send_message(chat, "Trying to download...")
+			ret=youtube.you(text)
+			bot.edit_message_text("Download successful. Trying to upload...", chat, yn.id)
+			bot.send_video(chat, open("youtube/video.mp4", "rb"))
+			bot.send_audio(chat, open("youtube/audio.mp3", "rb"))
+			open("youtube/video.mp4", "wb").close()
+			open("youtube/audio.mp3", "wb").close()
+			bot.send_video(chat, open("youtube/"+ret,"rb"))
+			bot.edit_message_text("Here is your video.", chat, yn.id)
+		except:
+			bot.send_message(chat, "An error occurred, try again later.")
 	elif "thank" in text.lower():
 		text1="It's my Pleasure 😃."
 		bot.send_message(chat, text1, reply_markup=keyboard)
