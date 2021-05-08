@@ -260,7 +260,10 @@ def reply(message):
 			bot.send_audio(chat, open("youtube/audio.mp3", "rb"))
 			open("youtube/video.mp4", "wb").close()
 			open("youtube/audio.mp3", "wb").close()
-			bot.send_video(chat, open("youtube/"+ret,"rb"))
+			try:
+				bot.send_video(chat, open("youtube/"+ret,"rb"))
+			except:
+				bot.send_document(chat, open("youtube/"+ret,"rb"))
 			bot.edit_message_text("Here is your video.", chat, yn.id)
 		except Exception as e:
 			bot.send_message(chat, "An error occurred, try again later.")
