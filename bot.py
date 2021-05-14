@@ -1,7 +1,10 @@
-import telebot, random, movie, news, datetime, calendar, json, replykey, pickle, music, time, os
+import telebot, random, movie, news, datetime, calendar, json, replykey, pickle, music, time
 from googlesearch import search
 from telebot import types
-TOKEN=os.getenv('TOKEN')
+
+import secret
+TOKEN = secret.key
+
 bot = telebot.TeleBot(TOKEN)
 pw=[]
 pwr=[]
@@ -251,23 +254,14 @@ def reply(message):
 				text1="I'm unable to answer the Question. Please verify the question and try again."
 		bot.send_message(chat, text1, reply_markup=keyboard)
 	elif "https://youtu" in text.lower() or "http://youtube.com" in text.lower() or "http://www.youtube.com" in text.lower():
-		try:	
-			import youtube
-			yn=bot.send_message(chat, "Trying to download...")
-			ret=youtube.you(text)
-			bot.edit_message_text("Download successful. Trying to upload...", chat, yn.id)
-			bot.send_video(chat, open("youtube/video.mp4", "rb"))
-			bot.send_audio(chat, open("youtube/audio.mp3", "rb"))
-			open("youtube/video.mp4", "wb").close()
-			open("youtube/audio.mp3", "wb").close()
-			try:
-				bot.send_video(chat, open("youtube/"+ret,"rb"))
-			except:
-				bot.send_document(chat, open("youtube/"+ret,"rb"))
-			bot.edit_message_text("Here is your video.", chat, yn.id)
-		except Exception as e:
-			bot.send_message(chat, "An error occurred, try again later.")
-			bot.send_message(chat, e)
+		import youtube
+		yn=bot.send_message(chat, "Trying to download...")
+		bot.edit_message_text("Download successful. Trying to upload...", chat, yn.id)
+		bot.send_document(chat, open("youtube/video.mp4", "rb"))
+		bot.send_document(chat, open("youtube/audio.mp3", "rb"))
+		open("youtube/video.mp4", "wb").close()
+		open("youtube/audio.mp3", "wb").close()
+		bot.edit_message_text("Here is your video.", chat, yn.id)
 	elif "thank" in text.lower():
 		text1="It's my Pleasure 😃."
 		bot.send_message(chat, text1, reply_markup=keyboard)
@@ -547,6 +541,13 @@ def handle_settings(message):
 	keyboard=keyfunc(message)
 	bot.send_message(message.from_user.id, text1, reply_markup=keyboard)
 	bot.send_sticker(message.from_user.id, text2, reply_markup=keyboard)
+
+@bot.message_handler(commands=['test'])
+def handle_test(message):
+	#print(message)
+	keyboard=keyfunc(message)
+	image="https://i.picsum.photos/id/545/536/354.jpg?hmac=0_n34QdvzfDfJKeV0FjK19sReQcN_3TxFqnc2jQ5TAo"
+	bot.send_message(message.from_user.id, "Check this out <a href='"+image+"'>&#8205;</a>", reply_markup=keyboard, parse_mode="HTML")
 
 # Handles all callback_data
 @bot.callback_query_handler(func=lambda call: True)
