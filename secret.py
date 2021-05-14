@@ -1,2 +1,2 @@
 import os
-key = os.environ('TOKEN')
+key = os.getenv('TOKEN')
